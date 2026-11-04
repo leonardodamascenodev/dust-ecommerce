@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto | Dust</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="product">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dust, página inicial"><img src="img/logo2.svg" alt="Dust"></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html#novidades">Lançamentos</a><a
+        href="index.html#produtos">Camisetas</a><a href="index.html#sobre">Sobre</a><a
+        href="index.html#contato">Contato</a></nav>
+    <div class="header-actions"><a href="cadastro.html">Entrar / Cadastrar</a><a class="cart-link" href="carrinho.html"
+        aria-label="Ver carrinho"><img src="img/carrinho.svg" alt=""><span id="cart-count">0</span></a></div>
+  </header>
+  <main class="container page-main">
+    <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="index.html">Início</a><span
+        aria-hidden="true">›</span><a href="index.html#produtos">Camisetas</a><span aria-hidden="true">›</span><span
+        id="breadcrumb-product">Camiseta Oriente Azul</span></nav>
+    <div class="product-detail">
+      <section class="gallery" aria-label="Galeria do produto">
+        <img class="gallery-main" id="gallery-main" src="img/imagem-produto1.avif"
+          alt="Camiseta Oriente Azul, vista principal">
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          <button type="button" class="active" aria-label="Ver imagem 1"><img src="img/imagem-produto1.avif"
+              alt="Vista frontal"></button>
+          <button type="button" aria-label="Ver imagem 2"><img src="img/oriente_2.jpg" alt="Outra vista"></button>
+          <button type="button" aria-label="Ver imagem 3"><img src="img/imagem-produto1.avif"
+              alt="Detalhe da estampa"></button>
+          <button type="button" aria-label="Ver imagem 4"><img src="img/oriente_2.jpg" alt="Detalhe do tecido"></button>
+        </div>
+      </section>
+      <section class="purchase-info" aria-labelledby="product-title">
+        <p class="eyebrow">COLEÇÃO DUST</p>
+        <h1 id="product-title">Camiseta Oriente Azul</h1>
+        <p class="rating" aria-label="Avaliação: 5 de 5 estrelas"><span aria-hidden="true">★★★★★</span> <small>5,0 · 24
+            avaliações</small></p>
+        <div class="price"><del id="old-price">R$ 199,90</del><strong id="current-price">R$ 169,90</strong><span>ou até
+            3x sem juros</span></div>
+        <p id="product-description">Modelagem confortável, visual marcante e tecido macio para acompanhar todos os seus
+          momentos.</p>
+        <label for="product-size" class="field-label">Selecione o tamanho</label>
+        <select id="product-size" required>
+          <option value="">Escolha um tamanho</option>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+          <option value="GG">GG</option>
+        </select>
+        <p id="size-error" class="field-error" aria-live="polite"></p>
+        <a href="carrinho.html" id="product-add" class="dark-button primary-button">Adicionar ao carrinho</a>
+        <p class="purchase-note">Frete grátis para pedidos a partir de R$ 299,00.</p>
+      </section>
+    </div>
+    <section class="specifications" aria-labelledby="spec-title">
+      <p class="eyebrow">DETALHES</p>
+      <h2 id="spec-title">Ficha técnica</h2>
+      <table>
+        <tbody>
+          <tr>
+            <th scope="row">Marca</th>
+            <td>Dust</td>
+          </tr>
+          <tr>
+            <th scope="row">Categoria</th>
+            <td>Camiseta</td>
+          </tr>
+          <tr>
+            <th scope="row">Modelagem</th>
+            <td>Oversized</td>
+          </tr>
+          <tr>
+            <th scope="row">Material</th>
+            <td>Algodão</td>
+          </tr>
+          <tr>
+            <th scope="row">Cor</th>
+            <td id="spec-color">Azul</td>
+          </tr>
+          <tr>
+            <th scope="row">Tamanhos</th>
+            <td>P, M, G e GG</td>
+          </tr>
+          <tr>
+            <th scope="row">Cuidados</th>
+            <td>Lavar do avesso e secar à sombra</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div>
+        <h2>Contato</h2>
+        <p>(18) 99900-0000</p>
+      </div>
+      <div>
+        <h2>Pagamento</h2>
+        <div class="payment-logos"><img src="img/visa.svg" alt="Visa"><img src="img/masterchef.svg" alt="Mastercard">
+        </div>
+      </div>
+      <div>
+        <h2>Explore</h2><a href="index.html">Vitrine</a><a href="carrinho.html">Carrinho</a><a
+          href="cadastro.html">Cadastro</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

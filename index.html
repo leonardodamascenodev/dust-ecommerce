@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça as camisetas e novidades da Dust.">
+  <title>Dust | Vitrine</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Dust, página inicial"><img src="img/logo2.svg" alt="Dust"></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html#novidades">Lançamentos</a>
+      <a href="index.html#produtos">Camisetas</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <div class="header-actions">
+      <a href="cadastro.html">Entrar / Cadastrar</a>
+      <a class="cart-link" href="carrinho.html" aria-label="Ver carrinho"><img src="img/carrinho.svg" alt=""><span
+          id="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="novidades" aria-label="Novidades e ofertas">
+      <div class="carrossel-promo">
+        <img src="img/banner-ofertas-desk.avif" alt="Ofertas da Dust">
+        <img src="img/best-sellers-desk.jpg-3-.avif" alt="Produtos mais vendidos da Dust">
+        <img src="img/IMG_8239.avif" alt="Nova coleção Dust">
+      </div>
+    </section>
+
+    <section class="categories container" aria-label="Categorias">
+      <a href="#produtos"><img src="img/camiseta-dust-1.avif" alt=""><span>Lançamentos</span></a>
+      <a href="#produtos"><img src="img/calca.avif" alt=""><span>Calças</span></a>
+      <a href="#produtos"><img src="img/bone-1.avif" alt=""><span>Bonés</span></a>
+      <a href="#produtos"><img src="img/jaqueta.avif" alt=""><span>Jaquetas</span></a>
+    </section>
+
+    <section class="container catalog" id="produtos">
+      <div class="section-heading">
+        <p class="eyebrow">FEITO PARA O SEU DIA A DIA</p>
+        <h1>Escolha seu próximo favorito</h1>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><a href="produto.html?id=oriente"><img src="img/imagem-produto1.avif"
+              alt="Camiseta Oriente Azul">
+            <h2>Camiseta Oriente Azul</h2>
+          </a>
+          <p>R$ 169,90</p><button type="button" class="outline-button add-product" data-product="oriente">Adicionar ao
+            carrinho</button>
+        </article>
+        <article class="product-card"><a href="produto.html?id=better"><img src="img/1-better-world-verde.avif"
+              alt="Camiseta Better World Verde">
+            <h2>Camiseta Better World Verde</h2>
+          </a>
+          <p>R$ 119,90</p><button type="button" class="outline-button add-product" data-product="better">Adicionar ao
+            carrinho</button>
+        </article>
+        <article class="product-card"><a href="produto.html?id=fake"><img src="img/camiseta-fake-perceptions.avif"
+              alt="Camiseta Fake Perceptions">
+            <h2>Camiseta Fake Perceptions</h2>
+          </a>
+          <p>R$ 119,90</p><button type="button" class="outline-button add-product" data-product="fake">Adicionar ao
+            carrinho</button>
+        </article>
+        <article class="product-card"><a href="produto.html?id=signature"><img src="img/camiseta-thedust.avif"
+              alt="Camiseta Signature Preta">
+            <h2>Camiseta Signature Preta - The Dust</h2>
+          </a>
+          <p>R$ 119,90</p><button type="button" class="outline-button add-product" data-product="signature">Adicionar ao
+            carrinho</button>
+        </article>
+        <article class="product-card sold-out"><a href="produto.html?id=all"><span
+              class="sold-label">ESGOTADO</span><img src="img/camiseta-all-dust.avif" alt="Camiseta All Dust">
+            <h2>Camiseta All Dust</h2>
+          </a>
+          <p>R$ 119,90</p><button type="button" class="outline-button" disabled>Indisponível</button>
+        </article>
+        <article class="product-card"><a href="produto.html?id=rituals"><img src="img/camiseta-rituals.avif"
+              alt="Camiseta Rituals">
+            <h2>Camiseta Rituals</h2>
+          </a>
+          <p>R$ 119,90</p><button type="button" class="outline-button add-product" data-product="rituals">Adicionar ao
+            carrinho</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="newsletter" id="sobre">
+    <div class="container newsletter-inner"><img src="img/logo2.svg" alt="Dust">
+      <div>
+        <h2>Receba nossas novidades</h2>
+        <p>Peças para quem gosta de vestir suas ideias.</p>
+        <form id="newsletter-form"><label class="sr-only" for="newsletter-email">Seu e-mail</label><input
+            id="newsletter-email" type="email" placeholder="Digite seu e-mail" required><button type="submit"
+            class="dark-button">Enviar</button></form>
+        <p class="form-message" id="newsletter-message" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div>
+        <h2>Contato</h2>
+        <p>(18) 99900-0000</p>
+      </div>
+      <div>
+        <h2>Pagamento</h2>
+        <div class="payment-logos"><img src="img/visa.svg" alt="Visa"><img src="img/masterchef.svg" alt="Mastercard">
+        </div>
+      </div>
+      <div>
+        <h2>Explore</h2><a href="produto.html">Produto</a><a href="carrinho.html">Carrinho</a><a
+          href="cadastro.html">Cadastro</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

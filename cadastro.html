@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e checkout | Dust</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="checkout">
+  <header class="site-header"><a class="brand" href="index.html" aria-label="Dust, página inicial"><img
+        src="img/logo2.svg" alt="Dust"></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html#novidades">Lançamentos</a><a
+        href="index.html#produtos">Camisetas</a><a href="index.html#sobre">Sobre</a><a
+        href="index.html#contato">Contato</a></nav>
+    <div class="header-actions"><a href="cadastro.html">Entrar / Cadastrar</a><a class="cart-link" href="carrinho.html"
+        aria-label="Ver carrinho"><img src="img/carrinho.svg" alt=""><span id="cart-count">0</span></a></div>
+  </header>
+  <main class="container page-main">
+    <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="index.html">Início</a><span
+        aria-hidden="true">›</span><a href="carrinho.html">Carrinho</a><span aria-hidden="true">›</span><span>Cadastro e
+        pagamento</span></nav>
+    <div class="page-title">
+      <p class="eyebrow">ÚLTIMA ETAPA</p>
+      <h1>Cadastro e checkout</h1>
+      <p>Preencha seus dados para concluir o pedido.</p>
+    </div>
+    <div class="checkout-layout">
+      <form id="checkout-form" class="checkout-form">
+        <fieldset>
+          <legend>1. Dados pessoais</legend>
+          <div class="form-grid">
+            <div class="form-field full"><label for="full-name">Nome completo *</label><input id="full-name" name="nome"
+                type="text" autocomplete="name" required></div>
+            <div class="form-field"><label for="email">E-mail *</label><input id="email" name="email" type="email"
+                autocomplete="email" required></div>
+            <div class="form-field"><label for="cpf">CPF *</label><input id="cpf" name="cpf" type="text"
+                inputmode="numeric" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00"
+                title="Use o formato 000.000.000-00" required></div>
+            <div class="form-field"><label for="phone">Telefone / WhatsApp *</label><input id="phone" name="telefone"
+                type="tel" autocomplete="tel" placeholder="(18) 99999-9999" required></div>
+            <div class="form-field"><label for="birth-date">Data de nascimento *</label><input id="birth-date"
+                name="nascimento" type="date" required></div>
+            <div class="form-field"><label for="password">Senha *</label><input id="password" name="senha"
+                type="password" minlength="8" autocomplete="new-password" required><small>Mínimo de 8
+                caracteres.</small></div>
+            <div class="form-field"><label for="avatar">Foto de perfil (opcional)</label><input id="avatar"
+                name="avatar" type="file" accept="image/*"></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Endereço de entrega</legend>
+          <div class="form-grid">
+            <div class="form-field"><label for="zip">CEP *</label><input id="zip" name="cep" type="text"
+                inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" placeholder="00000-000" title="Use o formato 00000-000"
+                autocomplete="postal-code" required></div>
+            <div class="form-field full"><label for="street">Rua / Logradouro *</label><input id="street" name="rua"
+                type="text" autocomplete="address-line1" required></div>
+            <div class="form-field"><label for="number">Número *</label><input id="number" name="numero" type="text"
+                required></div>
+            <div class="form-field"><label for="complement">Complemento (opcional)</label><input id="complement"
+                name="complemento" type="text" autocomplete="address-line2"></div>
+            <div class="form-field"><label for="district">Bairro *</label><input id="district" name="bairro" type="text"
+                required></div>
+            <div class="form-field"><label for="city">Cidade *</label><input id="city" name="cidade" type="text"
+                autocomplete="address-level2" required></div>
+            <div class="form-field"><label for="state">Estado *</label><select id="state" name="estado"
+                autocomplete="address-level1" required>
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>3. Forma de pagamento</legend>
+          <div class="payment-options"><label class="payment-option" for="pay-pix"><input id="pay-pix" type="radio"
+                name="pagamento" value="pix" required><span class="payment-icon"
+                aria-hidden="true">◆</span><span>PIX<small>Aprovação rápida</small></span></label><label
+              class="payment-option" for="pay-card"><input id="pay-card" type="radio" name="pagamento"
+                value="cartao"><span class="payment-icon" aria-hidden="true">▣</span><span>Cartão de crédito<small>Até
+                  3x sem juros</small></span><img src="img/visa.svg" alt="Visa"><img src="img/masterchef.svg"
+                alt="Mastercard"></label><label class="payment-option" for="pay-boleto"><input id="pay-boleto"
+                type="radio" name="pagamento" value="boleto"><span class="payment-icon"
+                aria-hidden="true">▤</span><span>Boleto<small>Pagamento à vista</small></span></label></div>
+        </fieldset>
+        <div class="terms"><input id="terms" name="termos" type="checkbox" required><label for="terms">Aceito os Termos
+            de Uso e confirmo os dados informados. *</label></div><button type="submit"
+          class="dark-button submit-button">Concluir cadastro e pagar</button>
+        <p id="checkout-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="checkout-aside">
+        <h2>Resumo do pedido</h2>
+        <p id="checkout-items">Confira os itens no carrinho.</p>
+        <div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">R$ 0,00</strong></div>
+        <div class="summary-line"><span>Frete</span><strong id="checkout-shipping">—</strong></div>
+        <div class="summary-line total-line"><span>Total</span><strong id="checkout-total">R$ 0,00</strong></div><a
+          href="carrinho.html" class="continue-link">← Editar carrinho</a>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div>
+        <h2>Contato</h2>
+        <p>(18) 99900-0000</p>
+      </div>
+      <div>
+        <h2>Pagamento</h2>
+        <div class="payment-logos"><img src="img/visa.svg" alt="Visa"><img src="img/masterchef.svg" alt="Mastercard">
+        </div>
+      </div>
+      <div>
+        <h2>Explore</h2><a href="index.html">Vitrine</a><a href="produto.html">Produto</a><a
+          href="carrinho.html">Carrinho</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

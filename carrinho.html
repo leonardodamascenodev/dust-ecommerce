@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Dust</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="cart">
+  <header class="site-header"><a class="brand" href="index.html" aria-label="Dust, página inicial"><img
+        src="img/logo2.svg" alt="Dust"></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html#novidades">Lançamentos</a><a
+        href="index.html#produtos">Camisetas</a><a href="index.html#sobre">Sobre</a><a
+        href="index.html#contato">Contato</a></nav>
+    <div class="header-actions"><a href="cadastro.html">Entrar / Cadastrar</a><a class="cart-link" href="carrinho.html"
+        aria-label="Ver carrinho"><img src="img/carrinho.svg" alt=""><span id="cart-count">0</span></a></div>
+  </header>
+  <main class="container page-main">
+    <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="index.html">Início</a><span
+        aria-hidden="true">›</span><span>Carrinho</span></nav>
+    <div class="page-title">
+      <p class="eyebrow">SEU PEDIDO</p>
+      <h1>Carrinho de compras</h1>
+      <p>Revise seus itens antes de continuar.</p>
+    </div>
+    <div class="cart-layout">
+      <section class="cart-items" aria-label="Itens do carrinho">
+        <div class="table-scroll">
+          <table class="cart-table">
+            <caption>Produtos no seu carrinho</caption>
+            <thead>
+              <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Preço unitário</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody id="cart-body">
+              <tr data-product="oriente">
+                <td>
+                  <div class="cart-product"><img src="img/imagem-produto1.avif" alt=""><span>Camiseta Oriente
+                      Azul<small>Camiseta · Tamanho M</small></span></div>
+                </td>
+                <td>R$ 169,90</td>
+                <td><input type="number" min="1" value="1" aria-label="Quantidade da Camiseta Oriente Azul"></td>
+                <td>R$ 169,90</td>
+                <td><button type="button" class="remove-button" aria-label="Remover Camiseta Oriente Azul">🗑️</button>
+                </td>
+              </tr>
+              <tr data-product="better">
+                <td>
+                  <div class="cart-product"><img src="img/1-better-world-verde.avif" alt=""><span>Camiseta Better World
+                      Verde<small>Camiseta · Tamanho M</small></span></div>
+                </td>
+                <td>R$ 119,90</td>
+                <td><input type="number" min="1" value="1" aria-label="Quantidade da Camiseta Better World Verde"></td>
+                <td>R$ 119,90</td>
+                <td><button type="button" class="remove-button"
+                    aria-label="Remover Camiseta Better World Verde">🗑️</button></td>
+              </tr>
+              <tr data-product="fake">
+                <td>
+                  <div class="cart-product"><img src="img/camiseta-fake-perceptions.avif" alt=""><span>Camiseta Fake
+                      Perceptions<small>Camiseta · Tamanho M</small></span></div>
+                </td>
+                <td>R$ 119,90</td>
+                <td><input type="number" min="1" value="1" aria-label="Quantidade da Camiseta Fake Perceptions"></td>
+                <td>R$ 119,90</td>
+                <td><button type="button" class="remove-button"
+                    aria-label="Remover Camiseta Fake Perceptions">🗑️</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">Frete grátis em compras a partir de R$ 299,00.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div><a href="index.html#produtos" class="continue-link">← Continuar comprando</a>
+      </section>
+      <aside class="order-summary">
+        <h2>Resumo do pedido</h2>
+        <div class="summary-line"><span>Subtotal</span><strong id="cart-subtotal">R$ 409,70</strong></div>
+        <div class="summary-line"><span>Frete</span><strong id="cart-shipping">Grátis</strong></div>
+        <form id="coupon-form"><label for="coupon-code">Cupom de desconto</label>
+          <div class="coupon-controls"><input id="coupon-code" type="text" placeholder="Digite seu cupom"><button
+              type="submit" class="outline-button">Aplicar</button></div>
+          <p class="form-message" id="coupon-message" aria-live="polite"></p>
+        </form>
+        <div class="summary-line total-line"><span>Total</span><strong id="cart-total">R$ 409,70</strong></div><a
+          href="cadastro.html" class="dark-button btn-checkout">Finalizar compra →</a>
+        <p class="summary-note">Pagamento seguro na próxima etapa.</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer" id="contato">
+    <div class="container footer-grid">
+      <div>
+        <h2>Contato</h2>
+        <p>(18) 99900-0000</p>
+      </div>
+      <div>
+        <h2>Pagamento</h2>
+        <div class="payment-logos"><img src="img/visa.svg" alt="Visa"><img src="img/masterchef.svg" alt="Mastercard">
+        </div>
+      </div>
+      <div>
+        <h2>Explore</h2><a href="index.html">Vitrine</a><a href="produto.html">Produto</a><a
+          href="cadastro.html">Cadastro</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
